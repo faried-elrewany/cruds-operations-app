@@ -1,0 +1,58 @@
+.btn,
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  font-size: 2rem;
+  color: white;
+  // background-color: red;
+  border-radius: 1000px;
+}
+.create-button {
+  background: linear-gradient(
+    to right bottom,
+    rgb(16, 46, 72),
+    rgb(10, 10, 64)
+  );
+  color: $white;
+}
+
+button {
+  padding: 0.8rem 1.6rem;
+  color: $black;
+  border-radius: 5px;
+  text-align: center;
+  border: 2px solid $lightGrey;
+  width: 70%;
+  cursor: pointer;
+  -webkit-margin-collapse: collapse;
+  border: none;
+  outline: none;
+  transition: all 0.3s;
+}
+button:hover {
+  background-color: $purple;
+  letter-spacing: 1.5px;
+  color: $red;
+}
+button:last-child {
+  margin-bottom: 1.6rem;
+}
+.active--del-all {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.table__btn--update,
+.table__btn--delete {
+  cursor: pointer !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 5px !important;
+  outline: none !important;
+  color: #ff8d29 !important ;
+  box-shadow: inset 0 0 10px rgb(10, 10, 64) !important ;
+  font-weight: 600 !important;
+  width: 60%;
+  margin: 0 auto;
+}

@@ -1,0 +1,131 @@
+.table-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .table {
+    width: 100%;
+    font-size: 1.4rem;
+    align-items: center;
+    box-sizing: border-box;
+    th {
+      width: 10%;
+      padding: 0.4rem0;
+      font-size: 2rem;
+      padding-bottom: 1.2rem;
+      padding-top: 1.2rem;
+      color: #ff4949;
+      font-weight: 600;
+      background: linear-gradient(to bottom right, #301f4d, #2d115d);
+    }
+    thead th:first-child {
+      width: 5%;
+      padding-left: 1rem;
+      border-top-left-radius: 1000px;
+    }
+    thead th:last-child {
+      padding-right: 1rem;
+      border-top-right-radius: 1000px;
+    }
+    thead th:nth-child(8) {
+      width: 15%;
+    }
+    tbody td:nth-child(9),
+    tbody td:nth-child(10) {
+      box-shadow: none;
+      transform: none;
+      font-weight: none;
+    }
+    td,
+    th {
+      text-align: center;
+    }
+    td {
+      color: $orange;
+      border: 1px solid transparent;
+      background-color: rgba(255, 255, 255, 0.11);
+      transition: all 0.4s;
+    }
+    td:hover {
+      box-shadow: 0 10px 10px $red;
+      transform: translateY(-10px);
+      background-color: $purple;
+      color: $yellow;
+      font-weight: bolder;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .table {
+      thead {
+        display: none;
+      }
+      tbody,
+      tr,
+      td {
+        display: block;
+        min-width: 100%;
+        text-align: right;
+      }
+      tr {
+        margin-bottom: 1.6rem;
+      }
+      td {
+        padding-right: 1.6rem;
+        position: relative;
+        font-weight: 500;
+        width: 50%;
+        &::before {
+          content: attr(data-label);
+          position: absolute;
+          left: 0;
+          width: 50%;
+          padding-left: 1.6rem;
+          text-align: left;
+          font-weight: 700;
+          display: block;
+        }
+      }
+      &__btn--update,
+      &__btn--delete {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+  }
+}
+.price-box {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.4rem;
+  flex-wrap: wrap;
+  input {
+    width: 45%;
+  }
+}
+.create__count {
+  width: 100%;
+}
+.count-label {
+  opacity: 0;
+  visibility: hidden;
+  font-size: 1.2rem;
+  position: absolute;
+}
+.active-label {
+  opacity: 1 !important;
+  visibility: visible !important;
+  top: 100%;
+  left: 0;
+  color: $red;
+  text-align: center;
+  width: 100%;
+}
+.count-box {
+  position: relative;
+  width: 100%;
+}

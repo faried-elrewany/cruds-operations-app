@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cruds System App</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- <h1>بسم الله الرحمن الرحيم</h1> -->
+
+    <main>
+      <section class="section-cruds">
+        <div class="cruds">
+          <form class="cruds__create">
+            <h2>create item</h2>
+            <input
+              type="text"
+              class="title input-main-style input-focus-style"
+              id="title"
+              placeholder="TITLE"
+              required
+            />
+            <input
+              type="text"
+              class="create__category input-main-style input-focus-style"
+              id="category"
+              placeholder="category"
+              required
+            />
+            <div class="price-box">
+              <input
+                type="number"
+                class="create__price input-main-style input-focus-style"
+                id="price"
+                placeholder="Price"
+                required
+              />
+              <input
+                type="number"
+                class="create__taxs input-main-style input-focus-style"
+                id="taxs"
+                placeholder="TAXS"
+              />
+              <input
+                type="number"
+                class="create__ads input-main-style input-focus-style"
+                id="ads"
+                placeholder="ADS"
+              />
+              <input
+                type="number"
+                class="create__discount input-main-style input-focus-style"
+                id="discount"
+                placeholder="discount "
+              />
+            </div>
+            <div class="count-box">
+              <label class="count-label" for="count"
+                >maximum count is 100!!</label
+              >
+              <input
+                type="number"
+                class="create__count input-main-style input-focus-style"
+                id="count"
+                placeholder="count = 1"
+                data-label="maximum count is 100"
+              />
+            </div>
+
+            <button class="create-button">create</button>
+            <div data-label="sum : " class="total total-price">&nbsp;</div>
+          </form>
+          <div class="cruds__search">
+            <h2>search for item</h2>
+
+            <input
+              onkeyup="searchForProduct(this.value)"
+              type="search"
+              class="search input-main-style input-focus-style"
+              placeholder="Search By Title"
+            />
+            <button onclick="getSearchMode(this.className)" class="category">
+              Search By Category
+            </button>
+            <button onclick="getSearchMode(this.className)" class="title">
+              Search By title
+            </button>
+          </div>
+          <div class="cruds__delete">
+            <button class="cruds__delete--all">
+              Delete ( <span></span> ) items
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="table-section">
+        <table class="table">
+          <thead class="tabel__head">
+            <th>ID</th>
+            <th>TITLE</th>
+            <th>PRICE</th>
+            <th>TAXES</th>
+            <th>ADS</th>
+            <th>DISCOUNT</th>
+            <th>TOTAL</th>
+            <th>CATEGORY</th>
+            <th>UPDATE</th>
+            <th>DELETE</th>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+    <!-- <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script> -->
+    <script src="script/script.js"></script>
+  </body>
+</html>

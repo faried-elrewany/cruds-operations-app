@@ -1,0 +1,14 @@
+body {
+  line-height: 1.7;
+  color: $grey;
+  font-weight: 400;
+  padding: 3rem;
+  background: linear-gradient(
+    135deg,
+    rgba(2, 0, 29, 1) 40%,
+    #670979 45%,
+    #1e0518 45%
+  );
+  // background-size: 50% 50%;
+  // height: 100vh;
+}

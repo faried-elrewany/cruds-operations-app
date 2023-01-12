@@ -1,0 +1,277 @@
+@charset "UTF-8";
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+.box {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: auto;
+  margin-right: auto; }
+
+body {
+  /* **** ليه كاتبينه في البادي  */
+  line-height: 1.7;
+  color: #777;
+  font-weight: 400;
+  padding: 3rem;
+  background: linear-gradient(135deg, #02001d 40%, #670979 45%, #1e0518 45%); }
+
+.margin--top-mdm {
+  margin-top: 6rem !important; }
+
+.margin--btm-mdm {
+  margin-top: 6rem !important; }
+
+.table-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .table-section .table {
+    width: 100%;
+    font-size: 1.4rem;
+    align-items: center;
+    box-sizing: border-box; }
+    .table-section .table th {
+      width: 10%;
+      padding: 0.4rem0;
+      font-size: 2rem;
+      padding-bottom: 1.2rem;
+      padding-top: 1.2rem;
+      color: #ff4949;
+      font-weight: 600;
+      background: linear-gradient(to bottom right, #301f4d, #2d115d); }
+    .table-section .table thead th:first-child {
+      width: 5%;
+      padding-left: 1rem;
+      border-top-left-radius: 1000px; }
+    .table-section .table thead th:last-child {
+      padding-right: 1rem;
+      border-top-right-radius: 1000px; }
+    .table-section .table thead th:nth-child(8) {
+      width: 15%; }
+    .table-section .table tbody td:nth-child(9),
+    .table-section .table tbody td:nth-child(10) {
+      box-shadow: none;
+      transform: none;
+      font-weight: none; }
+    .table-section .table td,
+    .table-section .table th {
+      text-align: center; }
+    .table-section .table td {
+      color: #ff8d29;
+      border: 1px solid transparent;
+      background-color: rgba(255, 255, 255, 0.11);
+      transition: all 0.4s; }
+    .table-section .table td:hover {
+      box-shadow: 0 10px 10px #ff4949;
+      transform: translateY(-10px);
+      background-color: #541690;
+      color: #ffcd38;
+      font-weight: bolder; }
+  @media (max-width: 992px) {
+    .table-section .table thead {
+      display: none; }
+    .table-section .table tbody,
+    .table-section .table tr,
+    .table-section .table td {
+      display: block;
+      min-width: 100%;
+      text-align: right; }
+    .table-section .table tr {
+      margin-bottom: 1.6rem; }
+    .table-section .table td {
+      padding-right: 1.6rem;
+      position: relative;
+      font-weight: 500;
+      width: 50%; }
+      .table-section .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 1.6rem;
+        text-align: left;
+        font-weight: 700;
+        display: block; }
+    .table-section .table__btn--update, .table-section .table__btn--delete {
+      width: 50%;
+      margin: 0 auto;
+      text-align: center; } }
+
+.price-box {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.4rem;
+  flex-wrap: wrap; }
+  .price-box input {
+    width: 45%; }
+
+.create__count {
+  width: 100%; }
+
+.count-label {
+  opacity: 0;
+  visibility: hidden;
+  font-size: 1.2rem;
+  position: absolute; }
+
+.active-label {
+  opacity: 1 !important;
+  visibility: visible !important;
+  top: 100%;
+  left: 0;
+  color: #ff4949;
+  text-align: center;
+  width: 100%; }
+
+.count-box {
+  position: relative;
+  width: 100%; }
+
+.btn,
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  font-size: 2rem;
+  color: white;
+  border-radius: 1000px; }
+
+.create-button {
+  background: linear-gradient(to right bottom, #102e48, #0a0a40);
+  color: #fff; }
+
+button {
+  padding: 0.8rem 1.6rem;
+  color: #000;
+  border-radius: 5px;
+  text-align: center;
+  border: 2px solid #eee;
+  width: 70%;
+  cursor: pointer;
+  -webkit-margin-collapse: collapse;
+  border: none;
+  outline: none;
+  transition: all 0.3s; }
+
+button:hover {
+  background-color: #541690;
+  letter-spacing: 1.5px;
+  color: #ff4949; }
+
+button:last-child {
+  margin-bottom: 1.6rem; }
+
+.active--del-all {
+  opacity: 1 !important;
+  visibility: visible !important; }
+
+.table__btn--update,
+.table__btn--delete {
+  cursor: pointer !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 5px !important;
+  outline: none !important;
+  color: #ff8d29 !important;
+  box-shadow: inset 0 0 10px #0a0a40 !important;
+  font-weight: 600 !important;
+  width: 60%;
+  margin: 0 auto; }
+
+h1 {
+  text-align: center;
+  padding: 2rem; }
+
+.cruds {
+  width: 100%;
+  font-size: 1.8rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 3rem; }
+  .cruds h2 {
+    text-align: center;
+    color: #fff; }
+  .cruds .total-price {
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 1.6rem;
+    width: 50%;
+    padding-left: 15%;
+    position: relative; }
+    .cruds .total-price::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 30%;
+      padding-left: 0.2rem; }
+  .cruds__delete {
+    border-radius: 5px;
+    grid-column: 1/ -1; }
+    .cruds__delete button {
+      font-weight: 700;
+      background: linear-gradient(to right bottom, rgba(255, 68, 0, 0.655), rgba(255, 0, 0, 0.477));
+      padding: 1rem;
+      width: 100%; }
+  .cruds__search {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right bottom, rgba(255, 165, 0, 0.9), rgba(255, 69, 0, 0.1)); }
+  .cruds__update {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: linear-gradient(to right bottom, rgba(14, 231, 14, 0.9), rgba(0, 128, 0, 0.1));
+    display: none; }
+  .cruds__create {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: linear-gradient(to right bottom, rgba(111, 170, 222, 0.9), rgba(0, 0, 255, 0.1)); }
+    .cruds__create .count-box {
+      text-align: center; }
+
+.cruds__delete--all {
+  opacity: 0;
+  visibility: hidden; }
+
+@media (max-width: 660px) {
+  .cruds {
+    grid-template-columns: 1; } }
+
+.input-main-style {
+  outline: none;
+  padding: 0.8rem 1.6rem;
+  color: #000;
+  border-radius: 5px;
+  text-align: center;
+  border: 2px solid #eee;
+  border: none;
+  width: 70%;
+  transition: all 0.3s;
+  font-size: inherit; }
+
+.input-main-style.input-focus-style:focus {
+  transform: scale(1.2);
+  letter-spacing: 1.5px;
+  font-size: 1.4rem; }
